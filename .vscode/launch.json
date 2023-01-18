@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+    
+        {
+            "name": "Cortex Debug", 
+            "cwd": "${workspaceRoot}",
+            "executable": "firmware.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd", 
+            "runToEntryPoint": "main",
+            "preLaunchTask": "build", 
+            "device": "STM32F429ZI", 
+            "svdFile": "${workspaceRoot}/Svd/STM32F429.svd",
+            "configFiles": [
+                "interface/stlink-v2.cfg", 
+                "target/stm32f4x.cfg"
+            ],
+            
+            "swoConfig": {
+                "enabled": true, 
+                "cpuFrequency": 8000000,
+                "swoFrequency": 2000000,
+                "source": "probe", 
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            }
+        }
+    ]
+}

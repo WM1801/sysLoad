@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "STM32", 
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceRoot}/**", 
+                "${workspaceRoot}/../../../"
+            ],
+            "defines": [
+                "STM32F429ZI",
+                "MG_ARCH=MG_ARCH_FREERTOS"
+            ],
+            "cStandard": "c11", 
+            "cppStandard": "c++17", 
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
